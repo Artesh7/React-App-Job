@@ -33,7 +33,8 @@ const EditJobPage = () => {
       },
     };
     updatedJobSubmit(updatedJob);
-    
+    toast.success("Job updated successfully");
+
     await fetch(`/api/jobs/${job._id}`, {
       method: "PUT",
       headers: {
