@@ -1,10 +1,11 @@
-import { useParams, useLoaderData, Link, useNavigate } from "react-router-dom";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
-
-const EditJobPage = () => {
+const EditJobPage = ({ updatedJobSubmit }) => {
   const job = useLoaderData();
-
+  const navigate = useNavigate();
+  const { id } = useParams();
   const [title, setTitle] = useState(job.title);
   const [type, setType] = useState(job.type);
   const [location, setLocation] = useState(job.location);
@@ -19,7 +20,7 @@ const EditJobPage = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     const updatedJob = {
-        id,
+      id,
       title,
       type,
       location,
@@ -35,13 +36,8 @@ const EditJobPage = () => {
     updatedJobSubmit(updatedJob);
     toast.success("Job updated successfully");
 
-    await fetch(`/api/jobs/${job._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedJob),
-    });
+    navigate(`/jobs/${id}`);
+  };
 
   return (
     <section className="bg-indigo-50">
