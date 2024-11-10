@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "6587",
-      "title": "J N",
-      "type": "Full-Time",
-      "location": "LLLLLLLLLL",
-      "description": "\nBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-      "salary": "$70K - 80K",
-      "company": {
-        "name": "Company Nameee",
-        "description": "C Desc",
-        "contactEmail": "sddsdsdsds@fdddd",
-        "contactPhone": "54656565465"
-      }
     }
   ]
 }
